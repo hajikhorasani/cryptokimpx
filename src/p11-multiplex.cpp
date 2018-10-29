@@ -44,12 +44,12 @@ using std::endl;
 #include  <stdio.h>
 #include  <stdlib.h>
 
-bool g_bEnableLog			= true;
+bool g_bEnableLog		= true;
 bool g_bEnableMultiLog		= false;
 
-const char *g_strCryprokiSection = "Cryptoki";
+const char *g_strCryprokiSection	= "Cryptoki";
 const char *g_strLogSection		= "LOG";
-const char *g_strCryprokiPrefix	= "FILE_PATH_";
+const char *g_strCryprokiPrefix		= "FILE_PATH_";
 
 char *g_strCryptokiConf	= {0};
 bool g_bIsStaticConf	= false;
@@ -72,14 +72,14 @@ bool gExt_bExitThread = false;
 bool gExt_bDllDetachCalled = false;
 #endif
 
-#define MULTIPLEXER_MANUFACTURERID			"Shahin Hajikhorasani                      "
+#define MULTIPLEXER_MANUFACTURERID		"Shahin Hajikhorasani                      "
 #define MULTIPLEXER_LIBRARY_DESCRIPTION		"Cryptokis' Multiplexer                    "
-#define VERSION_MAJOR						1
-#define VERSION_MINOR						1
-#define VERSION_MINOR_2						1
-#define VERSION_MINOR_3						1
-#define MAX_EVENT_ARRAY_SIZE				30
-#define MAX_WAIT_FOR_CS						500 
+#define VERSION_MAJOR				1
+#define VERSION_MINOR				1
+#define VERSION_MINOR_2				1
+#define VERSION_MINOR_3				1
+#define MAX_EVENT_ARRAY_SIZE			30
+#define MAX_WAIT_FOR_CS				500 
 
 #include <string>
 #include <string.h>
@@ -104,23 +104,23 @@ void on_load(void)
 
 struct stMapCryptoki
 {
-	CK_ULONG						ulSlotId;
-	CK_ULONG						ulRealSlotId;
-	CK_FUNCTION_LIST_PTR			ulFuncPointer;
-	CK_BBOOL						bIsPresent;
+	CK_ULONG			ulSlotId;
+	CK_ULONG			ulRealSlotId;
+	CK_FUNCTION_LIST_PTR		ulFuncPointer;
+	CK_BBOOL			bIsPresent;
 };
 
 struct stMapSessions
 {
-	CK_ULONG					ulSlotId;
+	CK_ULONG			ulSlotId;
 	vector<CK_SESSION_HANDLE>	vulSession;
 	vector<CK_SESSION_HANDLE> 	vulFakeSession;
 };
 
-string	*g_szCryptoKiPaths		= NULL;
+string	*g_szCryptoKiPaths	= NULL;
 bool	g_bSessionAlreadyMapped = false;
-bool	g_bAlreadyInited		= false;
-int		g_nCryptoKiCount		= 0;
+bool	g_bAlreadyInited	= false;
+int	g_nCryptoKiCount	= 0;
 
 vector<struct stMapCryptoki>	g_vCryptoMaps;
 vector<struct stMapSessions>	g_vSessionMaps;
@@ -145,8 +145,8 @@ struct g_CryptSlot
 	int slotNum;
 };
 
-g_CryptSlot	g_CryptSlotArray[150] = {0};
-int			g_CryptSlotArrayPtr	= 0;
+g_CryptSlot	g_CryptSlotArray[150]	= {0};
+int		g_CryptSlotArrayPtr	= 0;
 
 CK_RV SetConfigurationStatic(char* config)
 {
