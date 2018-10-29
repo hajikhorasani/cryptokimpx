@@ -18,11 +18,11 @@ It's really easy to use the Cryptokis' Multiplexer. Just put the configuration f
 
 [Cryptoki]
 
-FILE_PATH_0 = cryptoki0_file_path
+FILE_PATH_0 = Cryptoki library 0 file path
 
 ...
 
-FILE_PATH_N = cryptokiN_file_path
+FILE_PATH_N = Cryptoki library N file path
 
 
 [Log]
