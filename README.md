@@ -36,3 +36,6 @@ SEPARATE_FILES = true/false
 FILE_PATH = c:/temp/cryptoki.log
 - the log file path
 
+# Todo
+While I've been adding blocking mode to C_WaitForSlotEvent, I just added the Ms Windows specific locks of critical sections to safe the threads, thus supporting Linux has lost. The future plan is refining the code to compile on Linux.
+
