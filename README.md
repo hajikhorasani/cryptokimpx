@@ -13,3 +13,8 @@ It has to be mentioned that developing such a feature in most programming langua
 
 - Software developers who want to log all the PKCS #11 functions' parameters or want to use the PKCS #11 wrappers which usually support just one Cryptoki.
 
+# How to use it ?
+It's really easy to use the Cryptokis' Multiplexer. Just put the configuration file in the same place with the Cryptoki. Please note that the configuration file name should be same as Cryptoki's file name, but with .cfg extension. You can find the sample configuration file in "bin" directory.
+
+
+
